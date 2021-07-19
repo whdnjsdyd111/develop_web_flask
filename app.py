@@ -1,7 +1,7 @@
 import os.path
 import pickle
 
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -15,8 +15,9 @@ if os.path.isfile('C:\\user_info.data'):
 
 
 @app.route('/')
+@app.route('/index')
 def index():
-    return 'index'
+    return render_template('index.html')
 
 
 @app.route('/login')
