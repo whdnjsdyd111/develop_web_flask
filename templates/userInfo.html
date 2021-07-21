@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-메인페이지
+{% if name %}
+<p>아이디 : {{name}}</p>
+<p>비밀번호 : {{password}}</p>
+{% endif %}
 </body>
 </html>
