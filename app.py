@@ -12,11 +12,14 @@ if os.path.isfile('C:\\user_info.data'):
     user_info = pickle.load(f)
     f.close()
 
+board = [
+    {'title': 'zzz', 'content': 'hi~', 'writer': 'aaa'}
+]
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index', methods=['GET'])
 def index():
-    return 'main'
+    return render_template('index.html', bd=board)
 
 
 @app.route('/login', methods=['POST', 'GET'])

@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-메인페이지
+{% for item in bd -%}
+<div>
+  <b>{{item['writer']}}</b>
+  <strong>{{item['title']}}</strong>
+</div>
+{%- endfor %}
 </body>
 </html>
