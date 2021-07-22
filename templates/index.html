@@ -7,8 +7,10 @@
 <body>
 {% for item in bd -%}
 <div>
-  <b>{{item['writer']}}</b>
-  <strong>{{item['title']}}</strong>
+    <a href="/board/{{item['id']}}">
+        작성자 : <b>{{item['writer']}}</b>
+        제목 : <strong>{{item['title']}}</strong>
+    </a>
 </div>
 {%- endfor %}
 </body>
